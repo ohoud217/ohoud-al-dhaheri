@@ -1,5 +1,6 @@
 class Passenger:
     def __init__(self, name, booking_reference, seat_number, gender, age, nationality):
+        # Initialize passenger attributes
         self.name = name
         self.booking_reference = booking_reference
         self.seat_number = seat_number
@@ -7,6 +8,7 @@ class Passenger:
         self.age = age
         self.nationality = nationality
 
+    # Getter and setter methods for passenger attributes
     def get_name(self):
         return self.name
 
@@ -46,12 +48,14 @@ class Passenger:
 
 class Flight:
     def __init__(self, flight_number, destination, departure_time, gate_number, status):
+        # Initialize flight attributes
         self.flight_number = flight_number
         self.destination = destination
         self.departure_time = departure_time
         self.gate_number = gate_number
         self.status = status
 
+    # Getter and setter methods for flight attributes
     def get_flight_number(self):
         return self.flight_number
 
@@ -85,12 +89,14 @@ class Flight:
 
 class AirportStaff:
     def __init__(self, name, employee_id, role, shift, department):
+        # Initialize airport staff attributes
         self.name = name
         self.employee_id = employee_id
         self.role = role
         self.shift = shift
         self.department = department
 
+    # Getter and setter methods for airport staff attributes
     def get_name(self):
         return self.name
 
@@ -124,9 +130,11 @@ class AirportStaff:
 
 class GateStaff(AirportStaff):
     def __init__(self, name, employee_id, role, shift, department, contact_number):
+        # Initialize gate staff attributes, inheriting from AirportStaff
         super().__init__(name, employee_id, role, shift, department)
         self.contact_number = contact_number
 
+    # Getter and setter methods for gate staff attributes
     def get_contact_number(self):
         return self.contact_number
 
